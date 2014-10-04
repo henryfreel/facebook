@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAAF4F9519E07DD4003C3C2C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAF4F9419E07DD4003C3C2C /* DetailViewController.swift */; };
 		BAB4E25E19C7DBBE00937059 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB4E25D19C7DBBE00937059 /* AppDelegate.swift */; };
 		BAB4E26019C7DBBE00937059 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB4E25F19C7DBBE00937059 /* ViewController.swift */; };
 		BAB4E26319C7DBBE00937059 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB4E26119C7DBBE00937059 /* Main.storyboard */; };
 		BAB4E26519C7DBBE00937059 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB4E26419C7DBBE00937059 /* Images.xcassets */; };
 		BAB4E26819C7DBBE00937059 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAB4E26619C7DBBE00937059 /* LaunchScreen.xib */; };
 		BAB4E27419C7DBBE00937059 /* facebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB4E27319C7DBBE00937059 /* facebookTests.swift */; };
+		BAB4E27E19C7E09D00937059 /* newsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB4E27D19C7E09D00937059 /* newsFeedViewController.swift */; };
+		BAB4E28019C7E5E200937059 /* requestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB4E27F19C7E5E200937059 /* requestsViewController.swift */; };
+		BAB4E28219C7E7DF00937059 /* messagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB4E28119C7E7DF00937059 /* messagesViewController.swift */; };
+		BAB4E28419C7E91E00937059 /* notificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB4E28319C7E91E00937059 /* notificationsViewController.swift */; };
+		BAB4E28619C7EA7100937059 /* moreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB4E28519C7EA7100937059 /* moreViewController.swift */; };
+		BAFE512F19CA870F00CDEBC4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE512E19CA870F00CDEBC4 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BAAF4F9419E07DD4003C3C2C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
 		BAB4E25819C7DBBE00937059 /* facebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = facebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB4E25C19C7DBBE00937059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAB4E25D19C7DBBE00937059 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +44,12 @@
 		BAB4E26D19C7DBBE00937059 /* facebookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = facebookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB4E27219C7DBBE00937059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAB4E27319C7DBBE00937059 /* facebookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = facebookTests.swift; sourceTree = "<group>"; };
+		BAB4E27D19C7E09D00937059 /* newsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsFeedViewController.swift; sourceTree = "<group>"; };
+		BAB4E27F19C7E5E200937059 /* requestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = requestsViewController.swift; sourceTree = "<group>"; };
+		BAB4E28119C7E7DF00937059 /* messagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messagesViewController.swift; sourceTree = "<group>"; };
+		BAB4E28319C7E91E00937059 /* notificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = notificationsViewController.swift; sourceTree = "<group>"; };
+		BAB4E28519C7EA7100937059 /* moreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = moreViewController.swift; sourceTree = "<group>"; };
+		BAFE512E19CA870F00CDEBC4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +91,16 @@
 		BAB4E25A19C7DBBE00937059 /* facebook */ = {
 			isa = PBXGroup;
 			children = (
+				BAAF4F9419E07DD4003C3C2C /* DetailViewController.swift */,
 				BAB4E25D19C7DBBE00937059 /* AppDelegate.swift */,
 				BAB4E25F19C7DBBE00937059 /* ViewController.swift */,
 				BAB4E26119C7DBBE00937059 /* Main.storyboard */,
+				BAFE512E19CA870F00CDEBC4 /* LoginViewController.swift */,
+				BAB4E28519C7EA7100937059 /* moreViewController.swift */,
+				BAB4E28319C7E91E00937059 /* notificationsViewController.swift */,
+				BAB4E28119C7E7DF00937059 /* messagesViewController.swift */,
+				BAB4E27F19C7E5E200937059 /* requestsViewController.swift */,
+				BAB4E27D19C7E09D00937059 /* newsFeedViewController.swift */,
 				BAB4E26419C7DBBE00937059 /* Images.xcassets */,
 				BAB4E26619C7DBBE00937059 /* LaunchScreen.xib */,
 				BAB4E25B19C7DBBE00937059 /* Supporting Files */,
@@ -212,8 +233,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAAF4F9519E07DD4003C3C2C /* DetailViewController.swift in Sources */,
+				BAFE512F19CA870F00CDEBC4 /* LoginViewController.swift in Sources */,
 				BAB4E26019C7DBBE00937059 /* ViewController.swift in Sources */,
 				BAB4E25E19C7DBBE00937059 /* AppDelegate.swift in Sources */,
+				BAB4E28619C7EA7100937059 /* moreViewController.swift in Sources */,
+				BAB4E28019C7E5E200937059 /* requestsViewController.swift in Sources */,
+				BAB4E28419C7E91E00937059 /* notificationsViewController.swift in Sources */,
+				BAB4E28219C7E7DF00937059 /* messagesViewController.swift in Sources */,
+				BAB4E27E19C7E09D00937059 /* newsFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +433,7 @@
 				BAB4E27919C7DBBE00937059 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAB4E27A19C7DBBE00937059 /* Build configuration list for PBXNativeTarget "facebookTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +442,7 @@
 				BAB4E27C19C7DBBE00937059 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
