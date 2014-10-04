@@ -63,7 +63,7 @@ class newsFeedViewController: UIViewController, UIViewControllerTransitioningDel
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
         // The value here should be the duration of the animations scheduled in the animationTransition method
-        return 1.0
+        return 0.5
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -72,14 +72,16 @@ class newsFeedViewController: UIViewController, UIViewControllerTransitioningDel
         var toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
         var fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
         
+        
+        var window = UIApplication.sharedApplication().keyWindow
+        
+        var frame = window.convertRect(imageViewToSegue.frame, fromView: newsFeedScrollView)
+        var copyImageView = UIImageView(frame: frame)
+
+        
         if (isPresenting) {
             toViewController.view.alpha = 0
             
-            
-            var window = UIApplication.sharedApplication().keyWindow
-
-            var frame = window.convertRect(imageViewToSegue.frame, fromView: newsFeedScrollView)
-            var copyImageView = UIImageView(frame: frame)
             copyImageView.image = imageViewToSegue.image
             copyImageView.contentMode = UIViewContentMode.ScaleAspectFill
             copyImageView.clipsToBounds = true
@@ -88,30 +90,48 @@ class newsFeedViewController: UIViewController, UIViewControllerTransitioningDel
             
             containerView.addSubview(toViewController.view)
 
-            UIView.animateWithDuration(1, animations: { () -> Void in
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
                 
-                copyImageView.center = CGPoint(x: 160, y: 284)
                 copyImageView.frame.size.width = 320
+                copyImageView.frame.size.height = 320 * (copyImageView.image!.size.height / copyImageView.image!.size.width)
+                copyImageView.center.x = 320 / 2
+                copyImageView.center.y = 568 / 2
+                toViewController.view.alpha = 1
+
                 
                 }) { (finished: Bool) -> Void in
                     
-                    toViewController.view.alpha = 1
-                    copyImageView.hidden = true
+                    copyImageView.removeFromSuperview()
                     transitionContext.completeTransition(true)
                     
             }
         } else {
             
-            UIView.animateWithDuration(1, animations: { () -> Void in
+            copyImageView.image = imageViewToSegue.image
+            copyImageView.contentMode = UIViewContentMode.ScaleAspectFill
+            copyImageView.clipsToBounds = true
+            copyImageView.frame.size.width = 320
+            copyImageView.frame.size.height = 320 * (copyImageView.image!.size.height / copyImageView.image!.size.width)
+            copyImageView.center.x = 320 / 2
+            copyImageView.center.y = 568 / 2
+            
+            window.addSubview(copyImageView)
+            
+            toViewController.view.alpha = 0
+            fromViewController.view.alpha = 0
+            
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
                 
-                fromViewController.view.alpha = 0
+                toViewController.view.alpha = 1 
+                copyImageView.frame = window.convertRect(self.imageViewToSegue.frame, fromView: self.newsFeedScrollView)
                 
-                }) { (finished: Bool) -> Void in
+                }, completion: { (finished: Bool) -> Void in
                     
+                    copyImageView.removeFromSuperview()
                     transitionContext.completeTransition(true)
-                    fromViewController.view.removeFromSuperview()
                     
-            }
+            })
+            
         }
     }
 

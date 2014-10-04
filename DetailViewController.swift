@@ -17,15 +17,22 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        detailImageView.hidden = true
         
         photoScrollView.contentSize = CGSizeMake(320, 600)
-
         detailImageView.image = image
         
         detailImageView.center = CGPoint(x: view.center.x, y: view.center.y)
         //detailImageView.
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        detailImageView.hidden = false
+        
     }
 
     override func didReceiveMemoryWarning() {
