@@ -63,7 +63,7 @@ class newsFeedViewController: UIViewController, UIViewControllerTransitioningDel
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
         // The value here should be the duration of the animations scheduled in the animationTransition method
-        return 0.5
+        return 0.3
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -90,7 +90,7 @@ class newsFeedViewController: UIViewController, UIViewControllerTransitioningDel
             
             containerView.addSubview(toViewController.view)
 
-            UIView.animateWithDuration(0.5, animations: { () -> Void in
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
                 
                 copyImageView.frame.size.width = 320
                 copyImageView.frame.size.height = 320 * (copyImageView.image!.size.height / copyImageView.image!.size.width)
@@ -120,9 +120,9 @@ class newsFeedViewController: UIViewController, UIViewControllerTransitioningDel
             toViewController.view.alpha = 0
             fromViewController.view.alpha = 0
             
-            UIView.animateWithDuration(0.5, animations: { () -> Void in
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
                 
-                toViewController.view.alpha = 1 
+                toViewController.view.alpha = 1
                 copyImageView.frame = window.convertRect(self.imageViewToSegue.frame, fromView: self.newsFeedScrollView)
                 
                 }, completion: { (finished: Bool) -> Void in
