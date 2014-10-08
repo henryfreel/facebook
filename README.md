@@ -18,3 +18,5 @@ Required
 Optional
   * [ ] Optional: The full screen photo should be zoomable.
   * [ ] Optional: The user should be able to page through the other photos in full screen mode.
+
+![alt tag](facebookgif.gif)
