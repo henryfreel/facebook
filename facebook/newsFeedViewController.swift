@@ -63,7 +63,7 @@ class newsFeedViewController: UIViewController, UIViewControllerTransitioningDel
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
         // The value here should be the duration of the animations scheduled in the animationTransition method
-        return 0.3
+        return 0.4
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -90,7 +90,7 @@ class newsFeedViewController: UIViewController, UIViewControllerTransitioningDel
             
             containerView.addSubview(toViewController.view)
 
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
+            UIView.animateWithDuration(0.4, animations: { () -> Void in
                 
                 copyImageView.frame.size.width = 320
                 copyImageView.frame.size.height = 320 * (copyImageView.image!.size.height / copyImageView.image!.size.width)
@@ -107,22 +107,24 @@ class newsFeedViewController: UIViewController, UIViewControllerTransitioningDel
             }
         } else {
             
-            copyImageView.image = imageViewToSegue.image
+            
+            let vc = fromViewController as DetailViewController
+            
+            copyImageView.image = vc.detailImageView.image
+            copyImageView.frame = window.convertRect(vc.detailImageView.frame, fromView: vc.photoScrollView)
             copyImageView.contentMode = UIViewContentMode.ScaleAspectFill
             copyImageView.clipsToBounds = true
-            copyImageView.frame.size.width = 320
-            copyImageView.frame.size.height = 320 * (copyImageView.image!.size.height / copyImageView.image!.size.width)
-            copyImageView.center.x = 320 / 2
-            copyImageView.center.y = 568 / 2
             
             window.addSubview(copyImageView)
             
-            toViewController.view.alpha = 0
-            fromViewController.view.alpha = 0
+            //toViewController.view.alpha = 0
+            //fromViewController.view.alpha = 0
             
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
+            UIView.animateWithDuration(0.4, animations: { () -> Void in
                 
-                toViewController.view.alpha = 1
+                //toViewController.view.alpha = 1
+                fromViewController.view.alpha = 0
+                
                 copyImageView.frame = window.convertRect(self.imageViewToSegue.frame, fromView: self.newsFeedScrollView)
                 
                 }, completion: { (finished: Bool) -> Void in
@@ -141,6 +143,24 @@ class newsFeedViewController: UIViewController, UIViewControllerTransitioningDel
     
 }
 
+
+
+
+
+
+
+
+
+
+
+
+//            copyImageView.image = imageViewToSegue.image
+//            copyImageView.contentMode = UIViewContentMode.ScaleAspectFill
+//            copyImageView.clipsToBounds = true
+//            copyImageView.frame.size.width = 320
+//            copyImageView.frame.size.height = 320 * (copyImageView.image!.size.height / copyImageView.image!.size.width)
+//            copyImageView.center.x = 320 / 2
+//            copyImageView.center.y = 568 / 2
 
 
 

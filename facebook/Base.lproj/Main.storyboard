@@ -149,22 +149,30 @@
         <!--Detail View Controller-->
         <scene sceneID="ywN-Pk-otP">
             <objects>
-                <viewController id="QhO-9n-viW" customClass="DetailViewController" customModule="facebook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="QhO-9n-viW" customClass="DetailViewController" customModule="facebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xRd-hK-duF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="nda-Kb-8P4">
+                            <view contentMode="scaleToFill" id="i0N-2t-HJR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" id="nda-Kb-8P4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="37f-e3-iLS">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="37f-e3-iLS">
+                                        <rect key="frame" x="0.0" y="149" width="320" height="124"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </scrollView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="photo_actions" id="zXb-3a-ZWA">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iDV-T6-nEA">
                                 <rect key="frame" x="265" y="15" width="51" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -179,14 +187,17 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="i0N-2t-HJR" id="WIX-dz-Sne"/>
                         <outlet property="detailImageView" destination="37f-e3-iLS" id="R9b-Gv-Lxu"/>
+                        <outlet property="doneButton" destination="iDV-T6-nEA" id="gCq-D2-Czg"/>
+                        <outlet property="photoActionBarImageView" destination="zXb-3a-ZWA" id="AQ2-UU-2yH"/>
                         <outlet property="photoScrollView" destination="nda-Kb-8P4" id="u3e-uB-wLO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiB-6e-z98" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="HyX-Jd-FRn" userLabel="onTapDone"/>
             </objects>
-            <point key="canvasLocation" x="2492" y="2630"/>
+            <point key="canvasLocation" x="2494" y="2634"/>
         </scene>
         <!--Messages View Controller-->
         <scene sceneID="bxc-M1-IuI">
@@ -491,6 +502,7 @@
         <image name="notifications" width="320" height="818"/>
         <image name="notifications_tab" width="27" height="27"/>
         <image name="people" width="320" height="1006"/>
+        <image name="photo_actions" width="320" height="44"/>
         <image name="requests_tab" width="27" height="27"/>
         <image name="settings" width="320" height="1800"/>
         <image name="wedding1" width="320" height="480"/>
