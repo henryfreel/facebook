@@ -20,3 +20,4 @@ Optional
   * [ ] Optional: The user should be able to page through the other photos in full screen mode.
 
 ![alt tag](facebookgif.gif)
+![alt tag](facebookgof2.gif)
