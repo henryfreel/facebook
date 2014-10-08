@@ -16,7 +16,7 @@ Required
   * [x] If the user scrolls a large amount and releases, the full screen photo should dismiss.
   
 Optional
-  * [ ] Optional: The full screen photo should be zoomable.
+  * [x] Optional: The full screen photo should be zoomable.[I guess this counts, but I'm still workin' on it]
   * [ ] Optional: The user should be able to page through the other photos in full screen mode.
 
 ![alt tag](facebookgif.gif)
