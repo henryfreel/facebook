@@ -163,9 +163,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="37f-e3-iLS">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="37f-e3-iLS">
                                         <rect key="frame" x="0.0" y="149" width="320" height="124"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="jkp-5F-SJ8" appends="YES" id="UOs-e0-5Xt"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                             </scrollView>
@@ -196,8 +200,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiB-6e-z98" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="HyX-Jd-FRn" userLabel="onTapDone"/>
+                <pinchGestureRecognizer scale="1.2000000000000002" id="jkp-5F-SJ8">
+                    <connections>
+                        <action selector="didPinchPhoto:" destination="QhO-9n-viW" id="CO7-H0-JWT"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2494" y="2634"/>
+            <point key="canvasLocation" x="2517" y="2635"/>
         </scene>
         <!--Messages View Controller-->
         <scene sceneID="bxc-M1-IuI">

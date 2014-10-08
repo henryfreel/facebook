@@ -111,6 +111,42 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
+    @IBAction func didPinchPhoto(sender: UIPinchGestureRecognizer) {
+        
+        
+        var location = sender.locationInView(view)
+        var convertLocaationn = Float(location.x)
+        
+        if sender.state == UIGestureRecognizerState.Began {
+            
+            println("Message")
+            
+        } else if sender.state == UIGestureRecognizerState.Changed {
+            
+            //var backgroundAlphaDown = convertValue(convertTranslation, r1Min: 0, r1Max: -140, r2Min: 1, r2Max: 0)
+            //println("Message \(location)")
+            //detailImageView.transform = CGAffineTransformMakeScale(1.3, 1.3)
+            
+            detailImageView.transform = CGAffineTransformScale(detailImageView.transform, sender.scale, sender.scale)
+            
+            sender.scale = 1
+            
+        } else if sender.state == UIGestureRecognizerState.Ended {
+            
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.detailImageView.transform = CGAffineTransformIdentity
+
+            })
+            
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
     func convertValue(value: Float, r1Min: Float, r1Max: Float, r2Min: Float, r2Max: Float) -> Float {
         var ratio = (r2Max - r2Min) / (r1Max - r1Min)
         return value * ratio + r2Min - r1Min * ratio
