@@ -5,7 +5,7 @@ Time Spent
 -
 9 hours. Im gonna keep going and see if I can get one of the optionals. And see if I can get this thing to stop flashing black...
 
-EDIT: 10 hours!
+EDIT: 10 hours! Stil flashing black though >:(
 
 
 User Stories
