@@ -112,31 +112,41 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     
     
     @IBAction func didPinchPhoto(sender: UIPinchGestureRecognizer) {
-        
-        
-        var location = sender.locationInView(view)
-        var convertLocaationn = Float(location.x)
+
+        var width = detailImageView.frame.size.width
+
         
         if sender.state == UIGestureRecognizerState.Began {
             
-            println("Message")
+//            width = detailImageView.frame.size.width
             
         } else if sender.state == UIGestureRecognizerState.Changed {
             
-            //var backgroundAlphaDown = convertValue(convertTranslation, r1Min: 0, r1Max: -140, r2Min: 1, r2Max: 0)
-            //println("Message \(location)")
-            //detailImageView.transform = CGAffineTransformMakeScale(1.3, 1.3)
-            
+//            width = detailImageView.frame.size.width
+                
             detailImageView.transform = CGAffineTransformScale(detailImageView.transform, sender.scale, sender.scale)
-            
             sender.scale = 1
+            
+            println("Message \(width)")
             
         } else if sender.state == UIGestureRecognizerState.Ended {
             
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
-                self.detailImageView.transform = CGAffineTransformIdentity
-
-            })
+            if width < 320 {
+                
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    self.detailImageView.transform = CGAffineTransformIdentity
+                    
+                })
+                
+            } else if width > 960 {
+            
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.detailImageView.transform = CGAffineTransformMakeScale(3, 3)
+            
+                })
+            
+            }
+            
             
         }
         
